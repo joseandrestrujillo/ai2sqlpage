@@ -30,33 +30,43 @@ function generar_array(datos){
     return array;
 }
 
-const colorgenerado = generar_color();
-console.log(colorgenerado);
-const datosrec= [ 50, 80, 70, 65, 90 ];
-const $grafica = document.querySelector("#grafica");
-const etiquetas = [ "Lunes", "Martes", "Miercoles", "Jueves", "Viernes" ];//Eje x;
-const datos = {
-    label: "Trafico por dia de las semana",
-    data: datosrec, //Eje y
-    backgroundColor: generar_array(datosrec),
-    borderColor: 'rgb(0,0,0)'
-};
+function generar_datos(eje_y){
+    return {
+        data: eje_y, //Eje y
+        backgroundColor: 'rgba(255,206,26,0.25)',
+        borderColor: 'rgb(255,206,26,)'
+    };
+}
 
-new Chart($grafica, {
-    type:'pie',//Lineas: line, Barras:bar, Tartas: pie
-    data: {
-        labels: etiquetas,
-        datasets: [
-            datos,
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                }
-            }],
+function generar_datos_pie(eje_y){
+    return {
+        data: eje_y, //Eje y
+        backgroundColor: generar_array(eje_y),
+        borderColor: 'rgb(0,0,0)'
+    };
+}
+
+function graficos(tipo, eje_x, eje_y){
+    const $grafica = document.querySelector("#grafica");
+    const etiquetas = eje_x;//Eje x;
+    const datos = type == 'pie' ? generar_datos_pie(eje_y) : generar_datos(eje_y);
+
+    new Chart($grafica, {
+        type:tipo,//Lineas: line, Barras:bar, Tartas: pie
+        data: {
+            labels: etiquetas,//eje_x
+            datasets: [
+                datos,//eje_y
+            ]
         },
-    }
-});
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                    }
+                }],
+            },
+        }
+    });
+}
