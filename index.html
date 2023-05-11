@@ -1,1 +1,73 @@
-<h1>Hola soy asistente sql</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+
+  <body>
+    <nav>
+      <div id="navdiv">
+        <ul>
+          <li><a href="analisis.html" class="shadow__btn">¿Por qué SQL?</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <center>
+        <img src="./images/Ai2DB_sin_fondo.png" width="20%" height="5%" id="googleimg">
+        
+          
+        <form>
+          <div id="maindiv">
+            &nbsp;&nbsp;&nbsp;
+            <input placeholder="¿Que quieres saber?" class="input" name="prompt" id="text" type="text">
+            <span><button2 id="mic" style="outline: none"> <img id="mic" src="./images/mic.png" height="100%" ></button2></span>
+          </div>
+          <section>
+            <div><button href="https://es.wikipedia.org/wiki/Inteligencia_artificial" class="button">INFO
+              <span2></span2>
+            </button></div>
+            <div><button id="submit" class="button">HACER SOLICITUD<span2></span2></button></div>
+          </section>
+        </form>
+        <div id="Bottomdiv">
+        </div>
+
+        <div id ="graficas" class="radio-inputs" style="display: none;">
+          <label class="radio">
+            <input type="radio" name="radio" checked="">
+            <span class="name">Nada</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="radio">
+            <span class="name">Grafica1</span>
+          </label>
+            
+          <label class="radio">
+            <input type="radio" name="radio">
+            <span class="name">Grafica2</span>
+          </label>
+  
+          <label class="radio">
+            <input type="radio" name="radio">
+            <span class="name">Grafica3</span>
+            </label>
+        </div>
+
+     
+        <div id="waiting" style="display: none;">Cargando...</div>
+        <table id="table-results" class="table"></table>
+        </form>
+
+      </center>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
+
+
+
+
