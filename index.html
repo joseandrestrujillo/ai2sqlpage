@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
     <title></title>
   </head>
 
@@ -36,34 +37,61 @@
         <div id="Bottomdiv">
         </div>
 
-        <div id ="graficas" class="radio-inputs" style="display: none;">
+        <!-- <div id ="graficas" class="radio-inputs" style="display: none;">
           <label class="radio">
-            <input type="radio" name="radio" checked="">
+            <input type="radio" name="radio" checked>
             <span class="name">Nada</span>
           </label>
           <label class="radio">
             <input type="radio" name="radio">
-            <span class="name">Grafica1</span>
+            <span class="name">Linea</span>
           </label>
-            
           <label class="radio">
             <input type="radio" name="radio">
-            <span class="name">Grafica2</span>
+            <span class="name">Tarta</span>
           </label>
-  
           <label class="radio">
-            <input type="radio" name="radio">
-            <span class="name">Grafica3</span>
+          <input type="radio" name="radio">
+            <span class="name">Barras</span>
+          </label>
+        </div> -->
+        <form id="graficas" style="display: none;">
+          <div>
+            <label>
+              <input type="radio" name="tipoGrafica" value="Nada" onclick="updateForm()" checked>
+              Nada
             </label>
-        </div>
+            <label>
+              <input type="radio" name="tipoGrafica" value="line" onclick="updateForm()">
+              Linea
+            </label>
+            <label>
+              <input type="radio" name="tipoGrafica" value="pie" onclick="updateForm()">
+              Tarta
+            </label>
+            <label>
+              <input type="radio" name="tipoGrafica" value="bar" onclick="updateForm()">
+              Barras
+            </label>
+          </div>
+          <div id="selectDiv" style="display:none">
+            <select id="select1"></select>
+            <select id="select2"></select>
+            <button id="generateChart" type="button">Generar gráfica</button>
+          </div>
+        </form>
 
+        <div id="canvas" style="display: none;">
+          <h2>Mostrando gráfica:</h2>
+          <canvas id="grafica-canvas"></canvas>
+        </div>
      
         <div id="waiting" style="display: none;">Cargando...</div>
         <table id="table-results" class="table"></table>
-        </form>
-
       </center>
       <script src="script.js"></script>
+      <script src="grafica.js"></script>
+      <script src="formulario.js"></script>
     </main>
   </body>
 </html>
