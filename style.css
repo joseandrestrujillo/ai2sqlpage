@@ -237,8 +237,8 @@
   .radio-inputs .radio .name {
     border-radius: .5rem;
     border: none;
-    padding-left: 23.5px;
-    padding-right: 23.5px;
+    padding-left: 21.5px;
+    padding-right: 21.5px;
     color: #ffffff;
     transition: all .15s ease-in-out;
   }
@@ -496,8 +496,8 @@
   .radio-inputs .radio .name {
     border-radius: .5rem;
     border: none;
-    padding-left: 23.5px;
-    padding-right: 23.5px;
+    padding-left: 21.5px;
+    padding-right: 21.5px;
     color: #ffffff;
     transition: all .15s ease-in-out;
   }
