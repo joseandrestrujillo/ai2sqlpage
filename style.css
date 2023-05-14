@@ -106,7 +106,7 @@
     z-index: 1;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 500;
-    text-shadow: 0 0 10px #a18046;
+    text-shadow: 0 0 10px #c89948;
     
   }
   button span2 {
@@ -182,6 +182,7 @@
 
   table {
     position: relative;
+    bottom: -15px;
     border-collapse: collapse; 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     margin-left: 1%;
@@ -198,6 +199,62 @@
     top: 0; 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: #c89948;
+  }
+
+  .radio-inputs {
+    position: relative;
+    left: 6px;
+    flex-wrap: wrap;
+    border: 2px solid white; 
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 15px;
+
+  }
+  
+  .radio-inputs .radio {
+    position: relative;
+    flex: 1 1 auto;
+    text-align: center;
+    margin-top: 3px;
+    position: relative;
+    bottom: -1.4px;
+
+    
+
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+    position: relative;
+  }
+  
+  .radio-inputs .radio .name {
+    border-radius: .5rem;
+    border: none;
+    padding-left: 23.5px;
+    padding-right: 23.5px;
+    color: #ffffff;
+    transition: all .15s ease-in-out;
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #c89948;
+    font-weight: 900;
+    padding-bottom: 5.5px;
+    padding-top:6px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .desple {
+    position: relative;
+    bottom: -15px;
   }
 }
   
@@ -308,7 +365,7 @@
     z-index: 1;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 500;
-    text-shadow: 0 0 10px #a18046;
+    text-shadow: 0 0 10px #c89948;
     
   }
   button span2 {
@@ -335,10 +392,10 @@
   button:hover span2::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
-    background: #b5904e;
+    background: #c89948;
   }
   button:active span2::before {
-    background: #b5904e;
+    background: #c89948;
   }
 
   .shadow__btn {
@@ -384,6 +441,7 @@
 
   table {
     position: relative;
+    bottom: -15px;
     border-collapse: collapse; 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     margin-left: 1%;
@@ -404,10 +462,10 @@
 
   .radio-inputs {
     position: relative;
-    display: flex;
+    left: 6px;
     flex-wrap: wrap;
+    border: 2px solid white; 
     border-radius: 0.5rem;
-    background-color: #e6d79d;
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
@@ -415,59 +473,49 @@
     height: 30px;
     font-size: 14px;
     margin-top: 15px;
+
   }
   
   .radio-inputs .radio {
+    position: relative;
     flex: 1 1 auto;
     text-align: center;
     margin-top: 3px;
+    position: relative;
+    bottom: -1.4px;
+
+    
+
   }
   
   .radio-inputs .radio input {
     display: none;
+    position: relative;
   }
   
   .radio-inputs .radio .name {
     border-radius: .5rem;
     border: none;
-    padding: .5rem 0;
+    padding-left: 23.5px;
+    padding-right: 23.5px;
     color: #ffffff;
     transition: all .15s ease-in-out;
   }
   
   .radio-inputs .radio input:checked + .name {
-    background-color: #a18046;
+    background-color: #c89948;
     font-weight: 900;
-    padding-bottom: 7.5px;
-    padding-top:7px;
+    padding-bottom: 5.5px;
+    padding-top:6px;
     padding-right: 3px;
     padding-left: 3px;
+  }
+
+  .desple {
+    position: relative;
+    bottom: -15px;
   }
 
   
 
 }
-
-  
-#movies,
-#movies:focus,
-#movies:active {
-   background: none;
-   -webkit-appearance: none;
-}  
- 
-form {
-  background: transparent;
-}
-
-input {
-  background: transparent;
-  color: white
-}
-button
-{
-  background: transparent;
-}
-
-
-
