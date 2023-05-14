@@ -36,45 +36,31 @@
         </form>
         <div id="Bottomdiv">
         </div>
-
-        <!-- <div id ="graficas" class="radio-inputs" style="display: none;">
-          <label class="radio">
-            <input type="radio" name="radio" checked>
-            <span class="name">Nada</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="radio">
-            <span class="name">Linea</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="radio">
-            <span class="name">Tarta</span>
-          </label>
-          <label class="radio">
-          <input type="radio" name="radio">
-            <span class="name">Barras</span>
-          </label>
-        </div> -->
-        <form id="graficas" style="display: none;">
+        
+        <form id="graficas" class="radio-inputs" style="display:none">
           <div>
-            <label>
+            <label class="radio">
               <input type="radio" name="tipoGrafica" value="Nada" onclick="updateForm()" checked>
-              Nada
+              <span class="name">Nada</span>
+
             </label>
-            <label>
+            <label class="radio">
               <input type="radio" name="tipoGrafica" value="line" onclick="updateForm()">
-              Linea
+              <span class="name">Linea</span>
             </label>
-            <label>
+            <label class="radio">
               <input type="radio" name="tipoGrafica" value="pie" onclick="updateForm()">
-              Tarta
+              <span class="name">Tarta</span>
             </label>
-            <label>
+            <label class="radio">
               <input type="radio" name="tipoGrafica" value="bar" onclick="updateForm()">
-              Barras
+              <span class="name">Barras</span>
             </label>
           </div>
-          <div id="selectDiv" style="display:none">
+        </form>
+
+        <form  id="selectDiv" style="display:none" class="desple">
+          <div>
             <select id="select1"></select>
             <select id="select2"></select>
             <button id="generateChart" type="button">Generar gráfica</button>
@@ -95,6 +81,8 @@
     </main>
   </body>
 </html>
+
+
 
 
 
