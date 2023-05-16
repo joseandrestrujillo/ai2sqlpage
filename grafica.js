@@ -48,7 +48,7 @@ function generar_datos_pie(eje_y){
 
 function graficos(tipo, eje_x, eje_y){
     const $grafica = document.querySelector("#grafica-canvas");
-    const etiquetas = eje_x;//Eje x;
+    const etiquetas = eje_x.map(str => str.slice(0, 10));;//Eje x;
     const datos = tipo == 'pie' ? generar_datos_pie(eje_y) : generar_datos(eje_y);
 
     $grafica.innerHTML = ''
