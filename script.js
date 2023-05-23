@@ -59,6 +59,7 @@ function generateTable(data) {
 
 var submit = document.getElementById("submit");
 submit.onclick = function(e) {
+  document.getElementById('examples').remove();
     e.preventDefault()
     const promptString = document.querySelector('#text').value;
 
@@ -71,13 +72,14 @@ submit.onclick = function(e) {
         },
         body: JSON.stringify(data)
     };
-
+    
     const $waiting = document.getElementById("waiting")
     const $table = document.getElementById("table-results")
     const $graficas = document.getElementById("graficas")
     $table.innerHTML = ''
     $waiting.style.display = 'block'
     $graficas.style.display = 'none'
+    
     fetch(url, options)
         .then(response => response.json())
         .then(data => {

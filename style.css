@@ -556,3 +556,7 @@ button
     display:none;
   }
 }
+#examples{
+  color: #7C7C7C;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
